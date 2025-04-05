@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pomodoro Timer</title>
+     <link rel="stylesheet" href="./css/style.css">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+     <div class="pomodoro">
+          <div class="container">
+               <img src="./img/1.jpg" alt="" class="main_img">
+
+               <div class="custom_timer_container" id="custom_timer_container">
+                    <div class="custom_timer_content">
+                         <div class="btn_close close_modal">
+                              <i class='bx bx-x' ></i>
+                         </div>
+
+                         <div class="all_times">
+                              <div class="time_block">
+                                   <label for="" class="main_label">Focus Time</label>
+                                   <div class="custom_timer_inputs">
+                                        <input type="number" class="focus-minutes" placeholder="25" value="25" min="0" max="59">
+                                   </div>
+                                   <label for="">minutes</label>
+                              </div>
+          
+                              <div class="time_block">
+                                   <label for="" class="main_label">Short Break</label>
+                                   <div class="custom_timer_inputs">
+                                        <input type="number" class="short-break-minutes" placeholder="5" value="5" min="0" max="59">
+                                   </div>
+                                   <label for="">minutes</label>
+                              </div>
+          
+                              <div class="time_block">
+                                   <label for="" class="main_label">Long Break</label>
+                                   <div class="custom_timer_inputs">
+                                       <input type="number" class="long-break-minutes" placeholder="15" value="15" min="0" max="59">
+                                   </div>
+                                   <label for="">minutes</label>
+                              </div>
+                         </div>
+                         
+                         <div class="custom_timer_buttons">
+                              <button class="btn_ok">OK</button>
+                              <button class="btn_cancel close_modal">Cancel</button>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="content">
+                    <div class="buttons">
+                         <div>
+                              <button class="btn_focus active">Focus <i class='bx bxs-hot'></i></button>
+                              <button class="btn_short_break">Short Break <i class='bx bxs-coffee'></i></button>
+                              <button class="btn_long_break">Long Break <i class='bx bx-hourglass'></i></i></button>
+                         </div>
+                    </div>
+
+                    <div class="timer">
+                         00:00
+                    </div>
+
+                    <div class="buttons">
+                         <div>
+                              <button class="start active">Start</button>
+                              <button class="stop">Stop</button>
+                              <button class="reset">Reset</button>
+                         </div>
+
+                         <div>
+                              <button class="random">Random IMG</button>
+                              <button class="custom" id="custom">Custom Timer</button>
+                         </div>
+                    </div>
+               </div>
+        </div>
+     </div>    
+
+     <!-- Аудио для оповещений -->
+     <audio id="focus_sound" src="./sounds/focus_end.mp3"></audio>
+     <audio id="short_break_sound" src="./sounds/short_break_end.mp3"></audio>
+     <audio id="long_break_sound" src="./sounds/long_break_end.mp3"></audio>
+
+     <script src="./js/script.js"></script>
+     </body>
+</html>
